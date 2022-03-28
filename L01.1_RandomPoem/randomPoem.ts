@@ -6,53 +6,55 @@ Datum: 24.04.2022
 Quellen: GitHub Jirka
 */
 
-"use strict";
-// tslint:disable-next-line: variable-name
-var RandomPoem: {};
-// tslint:disable-next-line: typedef
-(function (_RandomPoem) {
-    /* Arrays: Prädikate, Objekte und Subjekte */
-    let subjects: string[] = ["Spider Man, Ironman, Hulk, Doctor Strange, Captain America, Black Panther"];
-    console.log(subjects);
-    
-    let predicates: string[] = ["mag, frisst, zerstört, liebt, zaubert, zerkratzt"];
-    console.log(predicates);
-    
-    let objects: string[] = ["Netze, Anzug, Monster, Magie, Schilde, Katzen"];
-    console.log(objects);
-    
-    for (let index: number = 5; index >= 0; index--) {
-        let randomPoem: string = getVerse(predicates, subjects, objects);
-        console.log(index);
+namespace RandomPoem {
+
+    //Arrays: Prädikate, Objekte und Subjekte 
+    let subjects: string[] = ["Spider Man", "Ironman", "Hulk", "Doctor Strange", "Captain America", "Black Panther"];
+    //console.log(subjects);
+
+    let predicates: string[] = ["mag", "frisst", "zerstört", "liebt", "zaubert", "zerkratzt"];
+    //console.log(predicates);
+
+    let objects: string[] = ["Netze", "Anzug", "Monster", "Magie", "Schilde", "Katzen"];
+    //console.log(objects);
+
+    //For Schleife um die Arrays von hinten nach vorne zu durchlaufen
+    for (let index: number = 5; index >= 1; index--) {
+
+        //Vorbereitung für die Konsolenausgabe
+        let randomPoem: string = getVerse(subjects, predicates, objects);
+        console.log(randomPoem);
     }
+
+    //Funktion um die Zufallszahlen zu erzeugen und mit den Arrays zu verrechnen
     // tslint:disable-next-line: typedef
-    function getVerse(_predicates: String[], _subjects: String[], _objects: String[]) {
-        console.log("Funktion wird aufgerufen");
-        
-        let subjects: number = Math.floor(Math.random() * _subjects.length);
-        console.log(subjects);
-        console.log("Funktion gibt SUBJEKT aus");
-        
+    function getVerse(_subjects: String[], _predicates: String[], _objects: String[]) {
+        //console.log("Funktion wird aufgerufen");
 
-        let predicates: number = Math.floor(Math.random() * _predicates.length);
-        console.log(predicates);
-        console.log("Funktion gibt PRÄDIKAT aus");
-        
-        
-        let objects: number = Math.floor(Math.random() * _objects.length);
-        console.log(objects);
-        console.log("Funktion gibt OBJEKT aus");
-        
+        let subject: number = Math.floor(Math.random() * _subjects.length);
+       // console.log(subjects);
+        //console.log("Funktion gibt SUBJEKT aus");
 
-        let sentences: string = subjects[subjects] + " " + predicates[predicates] + " " + objects[objects];
-        console.log("Funktion gibt Sätze aus");
-        console.log(sentences);
 
-        _predicates.splice(predicates, 1);
-        _subjects.splice(subjects, 1);
-        _objects.splice(objects, 1);
+        let predicate: number = Math.floor(Math.random() * _predicates.length);
+        //console.log(predicates);
+        //console.log("Funktion gibt PRÄDIKAT aus");
 
-        return sentences;
+
+        let object: number = Math.floor(Math.random() * _objects.length);
+        //console.log(objects);
+        //console.log("Funktion gibt OBJEKT aus");
+
+
+        let sentence: string = subjects[subject] + " " + predicates[predicate] + " " + objects[object];
+        //console.log("Funktion gibt Sätze aus");
+        //console.log(sentences);
+
+        _subjects.splice(subject, 1);
+        _predicates.splice(predicate, 1);
+        _objects.splice(object, 1);
+
+        return sentence;
     }
 
-})(RandomPoem || (RandomPoem = {}));
+}
