@@ -1,4 +1,4 @@
-namespace Strand {
+namespace L09_2_Strandszene {
 
     window.addEventListener("load", handleLoad);
     export let crc2: CanvasRenderingContext2D;
@@ -30,7 +30,7 @@ namespace Strand {
             let newBird: Seagull = new Seagull();
             newBird.x = Math.random() * crc2.canvas.width;
             newBird.y = Math.random() * 100;
-            newBird.speed = (Math.random() < 0.5 ? -1 : 1) * 2;
+            newBird.moving = (Math.random() < 0.5 ? -1 : 1) * 2;
             seagull[i] = newBird;
         }
         //Wolken platzieren
@@ -50,7 +50,7 @@ namespace Strand {
             let Ship1: Ship = new Ship();
             Ship1.x = 0;
             Ship1.y = 50;
-            Ship1.speed = (Math.random() + 1) * 0.5;
+            Ship1.moving = (Math.random() + 1) * 0.5;
             ship.push(Ship1);
         }
     }
@@ -74,7 +74,7 @@ namespace Strand {
         for (let i: number = 0; i < ship.length; i++) {
             let Ship: Ship = ship[i];
             Ship.moveForward();
-            Ship.drawShip();
+            Ship.drawShip(110, 275);
         }
 
         window.setTimeout(animate, 10);

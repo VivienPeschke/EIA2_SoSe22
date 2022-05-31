@@ -6,8 +6,9 @@ var L09_Old_Mac_Farm;
             this.food = _food;
             this.sound = _sound;
             this.foodStock = _foodStock;
-            this.eatFood();
+            this.eatFood(_food, _foodStock);
         }
+        // tslint:disable-next-line: typedef
         Animal.prototype.eatFood = function (_food, _foodStock) {
             return this.food;
         };

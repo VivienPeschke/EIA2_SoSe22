@@ -6,15 +6,15 @@ namespace L09_2_Strandszene {
 
             this.drawBackground();
             this.drawSun(100, 75);
-            this.drawBeach(-550, 120);
-            this.drawUrlauberi(-50, 350);
-            this.drawUrlauberi(50, 400);
+            this.drawBeach(0, 250);
+            this.drawUrlauberi(200, 120);
+            this.drawUrlauberi(100, 300);
             this.drawSurfboard(100, 100);
             this.drawSurfer(-25, 180);
             this.drawSwimmer(-200, 250);
             this.drawSwimmer(-350, 200);
-            this.drawPalmtrees(400, -400);
-            this.drawPalmtrees(975, - 450);
+            this.drawPalmtrees(0, 0);
+            this.drawPalmtrees(100, 250);
             this.drawVegetation(-450, 400);
             this.drawVegetation(-435, 400);
             this.drawVegetation(-465, 400);
@@ -304,3 +304,5 @@ namespace L09_2_Strandszene {
 
 
         }
+    }
+}

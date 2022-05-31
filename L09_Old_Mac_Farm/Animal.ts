@@ -12,9 +12,10 @@ namespace L09_Old_Mac_Farm {
             this.sound = _sound;
             this.foodStock = _foodStock;
 
-            this.eatFood();
+            this.eatFood(_food, _foodStock);
         }
 
+        // tslint:disable-next-line: typedef
         public eatFood(_food: string, _foodStock: number) {
             return this.food;
         }

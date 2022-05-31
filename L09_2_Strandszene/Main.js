@@ -1,5 +1,5 @@
-var Strand;
-(function (Strand) {
+var L09_2_Strandszene;
+(function (L09_2_Strandszene) {
     window.addEventListener("load", handleLoad);
     var canvas;
     var imgData;
@@ -10,26 +10,26 @@ var Strand;
     // Start
     function handleLoad(_event) {
         canvas = document.getElementsByTagName("canvas")[0];
-        Strand.crc2 = canvas.getContext("2d");
+        L09_2_Strandszene.crc2 = canvas.getContext("2d");
         //Hintergund mittels einer Klasse erstellen
-        var back = new Background();
+        var back = new L09_2_Strandszene.Background();
         console.log(back);
         //Speichern des Canvas als Bild (natürlich nachdem das Hintergrundbild gemalt wurde)
-        imgData = Strand.crc2.getImageData(0, 0, canvas.width, canvas.height);
+        imgData = L09_2_Strandszene.crc2.getImageData(0, 0, canvas.width, canvas.height);
         //Boot erstellen
         createShip(1);
         //Erscheinen der Vögel
         for (var i = 0; i < 7; i++) {
-            var newBird = new Seagull();
-            newBird.x = Math.random() * Strand.crc2.canvas.width;
+            var newBird = new L09_2_Strandszene.Seagull();
+            newBird.x = Math.random() * L09_2_Strandszene.crc2.canvas.width;
             newBird.y = Math.random() * 100;
-            newBird.speed = (Math.random() < 0.5 ? -1 : 1) * 2;
+            newBird.moving = (Math.random() < 0.5 ? -1 : 1) * 2;
             seagull[i] = newBird;
         }
         //Wolken platzieren
         for (var i = 0; i < 10; i++) {
-            var newCloud = new Cloud();
-            newCloud.x = Math.random() * Strand.crc2.canvas.width;
+            var newCloud = new L09_2_Strandszene.Cloud();
+            newCloud.x = Math.random() * L09_2_Strandszene.crc2.canvas.width;
             newCloud.y = Math.random() * 175;
             newCloud.speed = (Math.random() + 1) * 0.5;
             clouds.push(newCloud); // Wolke wird ins Array gepusht um beim animieren auf sie zugreifen zu können.
@@ -39,17 +39,17 @@ var Strand;
     //Funktion Boot
     function createShip(_n) {
         for (var index = 0; index < _n; index++) {
-            var Ship1 = new Ship();
+            var Ship1 = new L09_2_Strandszene.Ship();
             Ship1.x = 0;
             Ship1.y = 50;
-            Ship1.speed = (Math.random() + 1) * 0.5;
+            Ship1.moving = (Math.random() + 1) * 0.5;
             ship.push(Ship1);
         }
     }
     // ANIMATIONEN:
     // Funktion um Vögel und Wolken zu animieren
     function animate() {
-        Strand.crc2.putImageData(imgData, 0, 0);
+        L09_2_Strandszene.crc2.putImageData(imgData, 0, 0);
         for (var i = 0; i < clouds.length; i++) {
             clouds[i].moveForward();
         }
@@ -59,9 +59,9 @@ var Strand;
             b.update();
         }
         for (var i = 0; i < ship.length; i++) {
-            var Ship = ship[i];
-            Ship.moveForward();
-            Ship.drawShip();
+            var Ship_1 = ship[i];
+            Ship_1.moveForward();
+            Ship_1.drawShip(110, 275);
         }
         window.setTimeout(animate, 10);
     } //animate zu
@@ -70,5 +70,5 @@ var Strand;
         for (var i = 0; i < clouds.length; i++)
             clouds[i].drawCloud();
     }
-})(Strand || (Strand = {}));
+})(L09_2_Strandszene || (L09_2_Strandszene = {}));
 //# sourceMappingURL=Main.js.map

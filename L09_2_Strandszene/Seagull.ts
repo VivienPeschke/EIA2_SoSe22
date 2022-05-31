@@ -41,3 +41,4 @@ namespace L09_2_Strandszene {
         }
 
     }
+}
