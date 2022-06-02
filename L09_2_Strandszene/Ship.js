@@ -36,7 +36,7 @@ var L09_2_Strandszene;
             L09_2_Strandszene.crc2.fillRect(_x - 65, _y - 100, 15, 50);
         };
         Ship.prototype.moveForward = function () {
-            this.x += this.moving * +0.5; // - nach links und + nach rechts
+            this.x += this.moving * 0.5;
             if (this.x < 0) {
                 this.x = this.x + L09_2_Strandszene.crc2.canvas.width;
             }

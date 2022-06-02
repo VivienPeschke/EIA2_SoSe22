@@ -51,7 +51,7 @@ namespace L09_2_Strandszene {
         }
 
         moveForward(): void {
-            this.x += this.moving * +0.5; // - nach links und + nach rechts
+            this.x += this.moving * 0.5;
             if (this.x < 0) {
                 this.x = this.x + crc2.canvas.width;
             }

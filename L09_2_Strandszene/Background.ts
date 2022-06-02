@@ -7,14 +7,14 @@ namespace L09_2_Strandszene {
             this.drawBackground();
             this.drawSun(100, 75);
             this.drawBeach(0, 250);
-            this.drawUrlauberi(200, 120);
-            this.drawUrlauberi(100, 300);
-            this.drawSurfboard(100, 100);
-            this.drawSurfer(-25, 180);
-            this.drawSwimmer(-200, 250);
-            this.drawSwimmer(-350, 200);
-            this.drawPalmtrees(0, 0);
-            this.drawPalmtrees(100, 250);
+            this.drawUrlauberi(300, 475); //linker Urlauberi
+            this.drawUrlauberi(500, 500); //rechter Urlauberi
+            this.drawSurfboard(0, 0);
+            this.drawSurfer(400, 350);
+            this.drawSwimmer(230, 350);
+            this.drawSwimmer(500, 370);
+            this.drawPalmtrees(200, 500);
+            this.drawPalmtrees(600, 300);
             this.drawVegetation(-450, 400);
             this.drawVegetation(-435, 400);
             this.drawVegetation(-465, 400);
@@ -118,6 +118,18 @@ namespace L09_2_Strandszene {
 
         }
 
+        drawSurfboard(_x: number, _y: number): void {
+
+            crc2.beginPath();
+            crc2.ellipse(-20, 180, 20, 50, 20, 0, 2 * Math.PI);
+            crc2.stroke();
+            crc2.fillStyle = "orange";
+            crc2.fill();
+
+            crc2.save();
+            crc2.restore();
+        }
+
         drawSurfer(_x: number, _y: number): void {
 
             crc2.beginPath();
@@ -156,20 +168,6 @@ namespace L09_2_Strandszene {
             crc2.lineTo(_x + 2, _y - 58);
 
             crc2.stroke();
-
-            crc2.save();
-            crc2.translate(_x, _y);
-            crc2.restore();
-        }
-
-
-        drawSurfboard(_x: number, _y: number): void {
-
-            crc2.beginPath();
-            crc2.ellipse(-20, 180, 20, 50, 20, 0, 2 * Math.PI);
-            crc2.stroke();
-            crc2.fillStyle = "orange";
-            crc2.fill();
 
             crc2.save();
             crc2.translate(_x, _y);

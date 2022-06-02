@@ -26,10 +26,10 @@ namespace L09_2_Strandszene {
         createShip(1);
 
         //Erscheinen der Vögel
-        for (let i: number = 0; i < 7; i++) {
+        for (let i: number = 0; i < 3; i++) {
             let newBird: Seagull = new Seagull();
             newBird.x = Math.random() * crc2.canvas.width;
-            newBird.y = Math.random() * 100;
+            newBird.y = Math.random() * 50;
             newBird.moving = (Math.random() < 0.5 ? -1 : 1) * 2;
             seagull[i] = newBird;
         }
@@ -45,11 +45,11 @@ namespace L09_2_Strandszene {
         window.setTimeout(animate, 10);
     } // close load-function
     //Funktion Boot
-    function createShip(_n: number): void {
-        for (let index: number = 0; index < _n; index++) {
+    function createShip(n: number): void {
+        for (let index: number = 0; index < n; index++) {
             let Ship1: Ship = new Ship();
-            Ship1.x = 0;
-            Ship1.y = 50;
+            Ship1.x = 100;
+            Ship1.y = 350;
             Ship1.moving = (Math.random() + 1) * 0.5;
             ship.push(Ship1);
         }

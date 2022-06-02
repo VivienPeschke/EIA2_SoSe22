@@ -19,10 +19,10 @@ var L09_2_Strandszene;
         //Boot erstellen
         createShip(1);
         //Erscheinen der Vögel
-        for (var i = 0; i < 7; i++) {
+        for (var i = 0; i < 3; i++) {
             var newBird = new L09_2_Strandszene.Seagull();
             newBird.x = Math.random() * L09_2_Strandszene.crc2.canvas.width;
-            newBird.y = Math.random() * 100;
+            newBird.y = Math.random() * 50;
             newBird.moving = (Math.random() < 0.5 ? -1 : 1) * 2;
             seagull[i] = newBird;
         }
@@ -37,11 +37,11 @@ var L09_2_Strandszene;
         window.setTimeout(animate, 10);
     } // close load-function
     //Funktion Boot
-    function createShip(_n) {
-        for (var index = 0; index < _n; index++) {
+    function createShip(n) {
+        for (var index = 0; index < n; index++) {
             var Ship1 = new L09_2_Strandszene.Ship();
-            Ship1.x = 0;
-            Ship1.y = 50;
+            Ship1.x = 100;
+            Ship1.y = 350;
             Ship1.moving = (Math.random() + 1) * 0.5;
             ship.push(Ship1);
         }
