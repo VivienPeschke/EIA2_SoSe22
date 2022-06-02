@@ -9,21 +9,27 @@ namespace L09_2_Strandszene {
             this.drawBeach(0, 250);
             this.drawUrlauberi(300, 475); //linker Urlauberi
             this.drawUrlauberi(500, 500); //rechter Urlauberi
-            this.drawSurfboard(0, 0);
-            this.drawSurfer(400, 350);
-            this.drawSwimmer(230, 350);
-            this.drawSwimmer(500, 370);
-            this.drawPalmtrees(200, 500);
-            this.drawPalmtrees(600, 300);
-            this.drawVegetation(-450, 400);
-            this.drawVegetation(-435, 400);
-            this.drawVegetation(-465, 400);
-            this.drawVegetation(130, 350);
-            this.drawVegetation(120, 350);
-            this.drawVegetation(140, 350);
-            this.drawVegetation(175, 400);
-            this.drawVegetation(-250, 380);
-            this.drawVegetation(-300, 400);
+
+            this.drawSurfboard(350, 400);
+            this.drawSurfer(400, 350); //Stehendes Männchen im Wasser
+
+            this.drawSwimmer(230, 350); //Linker Swimmer
+            this.drawSwimmer(500, 370); // Rechter Swimmer
+
+            this.drawPalmtrees(130, 470);
+            this.drawPalmtrees(650, 450);
+
+            this.drawVegetation(635, 450); //Rechte Vegetation; Linker Büschel
+            this.drawVegetation(650, 450); //Rechte Vegetation; Mittlerer Büschel
+            this.drawVegetation(665, 450); //Rechte Vegetation; Rechter Büschel
+
+            this.drawVegetation(120, 475); //Linke Vegetation; Linker Büschel
+            this.drawVegetation(130, 475); //Linke Vegetation; Mittlerer Büschel
+            this.drawVegetation(140, 475); //Linke Vegetation; Rechter Büschel
+
+            this.drawVegetation(200, 500); //Freie Vegetation; Links
+            this.drawVegetation(350, 480); //Freie Vegetation; Mitte
+            this.drawVegetation(575, 500); //Freie Vegetation; Rechts
         }
 
         drawBackground(): void {
