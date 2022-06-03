@@ -1,5 +1,7 @@
 namespace L09_2_Strandszene {
 
+    //Code-Kopie von Lisa Fodor
+    
     window.addEventListener("load", handleLoad);
     export let crc2: CanvasRenderingContext2D;
     let canvas: HTMLCanvasElement;
@@ -44,12 +46,13 @@ namespace L09_2_Strandszene {
 
         window.setTimeout(animate, 10);
     } // close load-function
+
     //Funktion Boot
     function createShip(n: number): void {
         for (let index: number = 0; index < n; index++) {
             let Ship1: Ship = new Ship();
             Ship1.x = 100;
-            Ship1.y = 350;
+            Ship1.y = 270;
             Ship1.moving = (Math.random() + 1) * 0.5;
             ship.push(Ship1);
         }
@@ -74,7 +77,7 @@ namespace L09_2_Strandszene {
         for (let i: number = 0; i < ship.length; i++) {
             let Ship: Ship = ship[i];
             Ship.moveForward();
-            Ship.drawShip(110, 275);
+            Ship.drawShip();
         }
 
         window.setTimeout(animate, 10);

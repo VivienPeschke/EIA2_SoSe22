@@ -3,37 +3,37 @@ var L09_2_Strandszene;
     var Ship = /** @class */ (function () {
         function Ship() {
         }
-        Ship.prototype.drawShip = function (_x, _y) {
+        Ship.prototype.drawShip = function () {
             //Schiff
             L09_2_Strandszene.crc2.beginPath();
-            L09_2_Strandszene.crc2.moveTo(_x + 0, _y + 0);
-            L09_2_Strandszene.crc2.lineTo(_x + 30, _y - 50);
-            L09_2_Strandszene.crc2.lineTo(_x - 100, _y - 50);
-            L09_2_Strandszene.crc2.lineTo(_x - 70, _y + 0);
+            L09_2_Strandszene.crc2.moveTo(this.x + 0, this.y + 0);
+            L09_2_Strandszene.crc2.lineTo(this.x + 30, this.y - 50);
+            L09_2_Strandszene.crc2.lineTo(this.x - 100, this.y - 50);
+            L09_2_Strandszene.crc2.lineTo(this.x - 70, this.y + 0);
             L09_2_Strandszene.crc2.closePath();
             L09_2_Strandszene.crc2.stroke();
             L09_2_Strandszene.crc2.fillStyle = "grey";
             L09_2_Strandszene.crc2.fill();
             //Schiffsfenster
             L09_2_Strandszene.crc2.fillStyle = "lightgrey";
-            L09_2_Strandszene.crc2.fillRect(_x + 0, _y - 40, 8, 12);
+            L09_2_Strandszene.crc2.fillRect(this.x + 0, this.y - 40, 8, 12);
             L09_2_Strandszene.crc2.fillStyle = "lightgrey";
-            L09_2_Strandszene.crc2.fillRect(_x - 20, _y - 40, 8, 12);
+            L09_2_Strandszene.crc2.fillRect(this.x - 20, this.y - 40, 8, 12);
             L09_2_Strandszene.crc2.fillStyle = "lightgrey";
-            L09_2_Strandszene.crc2.fillRect(_x - 40, _y - 40, 8, 12);
+            L09_2_Strandszene.crc2.fillRect(this.x - 40, this.y - 40, 8, 12);
             L09_2_Strandszene.crc2.fillStyle = "lightgrey";
-            L09_2_Strandszene.crc2.fillRect(_x - 60, _y - 40, 8, 12);
+            L09_2_Strandszene.crc2.fillRect(this.x - 60, this.y - 40, 8, 12);
             L09_2_Strandszene.crc2.fillStyle = "lightgrey";
-            L09_2_Strandszene.crc2.fillRect(_x - 80, _y - 40, 8, 12);
+            L09_2_Strandszene.crc2.fillRect(this.x - 80, this.y - 40, 8, 12);
             //Schiffstürme (Nicht sicher, ob die so heißen..)
             L09_2_Strandszene.crc2.fillStyle = ("HSL(33, 0%, 15%");
-            L09_2_Strandszene.crc2.fillRect(_x + 0, _y - 100, 15, 50);
+            L09_2_Strandszene.crc2.fillRect(this.x + 0, this.y - 100, 15, 50);
             L09_2_Strandszene.crc2.fillStyle = ("HSL(33, 0%, 15%");
-            L09_2_Strandszene.crc2.fillRect(_x - 20, _y - 100, 15, 50);
+            L09_2_Strandszene.crc2.fillRect(this.x - 20, this.y - 100, 15, 50);
             L09_2_Strandszene.crc2.fillStyle = ("HSL(33, 0%, 15%");
-            L09_2_Strandszene.crc2.fillRect(_x - 45, _y - 100, 15, 50);
+            L09_2_Strandszene.crc2.fillRect(this.x - 45, this.y - 100, 15, 50);
             L09_2_Strandszene.crc2.fillStyle = ("HSL(33, 0%, 15%");
-            L09_2_Strandszene.crc2.fillRect(_x - 65, _y - 100, 15, 50);
+            L09_2_Strandszene.crc2.fillRect(this.x - 65, this.y - 100, 15, 50);
         };
         Ship.prototype.moveForward = function () {
             this.x += this.moving * 0.5;

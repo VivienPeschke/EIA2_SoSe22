@@ -1,5 +1,6 @@
 var L09_2_Strandszene;
 (function (L09_2_Strandszene) {
+    //Code-Kopie von Lisa Fodor
     window.addEventListener("load", handleLoad);
     var canvas;
     var imgData;
@@ -41,7 +42,7 @@ var L09_2_Strandszene;
         for (var index = 0; index < n; index++) {
             var Ship1 = new L09_2_Strandszene.Ship();
             Ship1.x = 100;
-            Ship1.y = 350;
+            Ship1.y = 270;
             Ship1.moving = (Math.random() + 1) * 0.5;
             ship.push(Ship1);
         }
@@ -61,7 +62,7 @@ var L09_2_Strandszene;
         for (var i = 0; i < ship.length; i++) {
             var Ship_1 = ship[i];
             Ship_1.moveForward();
-            Ship_1.drawShip(110, 275);
+            Ship_1.drawShip();
         }
         window.setTimeout(animate, 10);
     } //animate zu

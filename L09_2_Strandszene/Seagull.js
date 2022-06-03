@@ -4,19 +4,19 @@ var L09_2_Strandszene;
         function Seagull() {
             this.x = 0;
             this.y = 0;
-            this.drawSeagull(0, 0);
-            this.drawSeagull(-100, -50);
+            this.drawSeagull();
+            this.drawSeagull();
             this.moveForward();
         }
-        Seagull.prototype.drawSeagull = function (_x, _y) {
+        Seagull.prototype.drawSeagull = function () {
             L09_2_Strandszene.crc2.beginPath();
-            L09_2_Strandszene.crc2.arc(_x + 0, _y + 0, 8, 3, 0);
-            L09_2_Strandszene.crc2.arc(_x + 16, _y + 0, 8, 3, 0);
+            L09_2_Strandszene.crc2.arc(this.x + 0, this.y + 0, 8, 3, 0);
+            L09_2_Strandszene.crc2.arc(this.x + 16, this.y + 0, 8, 3, 0);
             L09_2_Strandszene.crc2.stroke();
         };
         Seagull.prototype.update = function () {
-            this.drawSeagull(0, 0);
-            this.drawSeagull(-100, -50);
+            this.drawSeagull();
+            this.drawSeagull();
             this.moveForward();
         };
         Seagull.prototype.moveForward = function () {

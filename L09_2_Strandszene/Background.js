@@ -7,7 +7,7 @@ var L09_2_Strandszene;
             this.drawBeach(0, 250);
             this.drawUrlauberi(300, 475); //linker Urlauberi
             this.drawUrlauberi(500, 500); //rechter Urlauberi
-            this.drawSurfboard(350, 400);
+            this.drawSurfboard(); //braucht keine Übergabeparameter; wird an der entsprechenden Stelle gezeichnet
             this.drawSurfer(400, 350); //Stehendes Männchen im Wasser
             this.drawSwimmer(230, 350); //Linker Swimmer
             this.drawSwimmer(500, 370); // Rechter Swimmer
@@ -90,9 +90,9 @@ var L09_2_Strandszene;
             L09_2_Strandszene.crc2.translate(_x, _y);
             L09_2_Strandszene.crc2.restore();
         };
-        Background.prototype.drawSurfboard = function (_x, _y) {
+        Background.prototype.drawSurfboard = function () {
             L09_2_Strandszene.crc2.beginPath();
-            L09_2_Strandszene.crc2.ellipse(-20, 180, 20, 50, 20, 0, 2 * Math.PI);
+            L09_2_Strandszene.crc2.ellipse(400, 350, 20, 50, 20, 0, 2 * Math.PI);
             L09_2_Strandszene.crc2.stroke();
             L09_2_Strandszene.crc2.fillStyle = "orange";
             L09_2_Strandszene.crc2.fill();
@@ -162,58 +162,58 @@ var L09_2_Strandszene;
         Background.prototype.drawPalmtrees = function (_x, _y) {
             //Stamm (Baumstamm-mäßig?!)
             L09_2_Strandszene.crc2.fillStyle = ("HSL(33, 46%, 23%");
-            L09_2_Strandszene.crc2.fillRect(_x - 850, _y + 550, 15, 250);
+            L09_2_Strandszene.crc2.fillRect(_x + 0, _y - 150, 15, 150);
             //Blätter (Sind das Blätter?!)
             //Blatt links unten
             L09_2_Strandszene.crc2.beginPath();
-            L09_2_Strandszene.crc2.moveTo(_x - 840, _y + 545);
-            L09_2_Strandszene.crc2.lineTo(_x - 930, _y + 600);
-            L09_2_Strandszene.crc2.lineTo(_x - 840, _y + 570);
-            L09_2_Strandszene.crc2.closePath();
-            L09_2_Strandszene.crc2.stroke();
-            L09_2_Strandszene.crc2.fillStyle = "green";
-            L09_2_Strandszene.crc2.fill();
-            //Blatt rechts unten
-            L09_2_Strandszene.crc2.beginPath();
-            L09_2_Strandszene.crc2.moveTo(_x - 840, _y + 545);
-            L09_2_Strandszene.crc2.lineTo(_x - 750, _y + 600);
-            L09_2_Strandszene.crc2.lineTo(_x - 840, _y + 570);
-            L09_2_Strandszene.crc2.closePath();
-            L09_2_Strandszene.crc2.stroke();
-            L09_2_Strandszene.crc2.fillStyle = "green";
-            L09_2_Strandszene.crc2.fill();
-            //Blatt rechts mitte
-            L09_2_Strandszene.crc2.beginPath();
-            L09_2_Strandszene.crc2.moveTo(_x - 840, _y + 545);
-            L09_2_Strandszene.crc2.lineTo(_x - 750, _y + 550);
-            L09_2_Strandszene.crc2.lineTo(_x - 840, _y + 570);
+            L09_2_Strandszene.crc2.moveTo(_x + 7, _y - 150);
+            L09_2_Strandszene.crc2.lineTo(_x - 80, _y - 130);
+            L09_2_Strandszene.crc2.lineTo(_x + 7, _y - 130);
             L09_2_Strandszene.crc2.closePath();
             L09_2_Strandszene.crc2.stroke();
             L09_2_Strandszene.crc2.fillStyle = "green";
             L09_2_Strandszene.crc2.fill();
             //Blatt links mitte
             L09_2_Strandszene.crc2.beginPath();
-            L09_2_Strandszene.crc2.moveTo(_x - 840, _y + 545);
-            L09_2_Strandszene.crc2.lineTo(_x - 930, _y + 550);
-            L09_2_Strandszene.crc2.lineTo(_x - 840, _y + 570);
+            L09_2_Strandszene.crc2.moveTo(_x + 7, _y - 145);
+            L09_2_Strandszene.crc2.lineTo(_x - 80, _y - 110);
+            L09_2_Strandszene.crc2.lineTo(_x + 7, _y - 125);
             L09_2_Strandszene.crc2.closePath();
             L09_2_Strandszene.crc2.stroke();
             L09_2_Strandszene.crc2.fillStyle = "green";
             L09_2_Strandszene.crc2.fill();
-            //Blatt links oben
+            //Blatt links oben 
             L09_2_Strandszene.crc2.beginPath();
-            L09_2_Strandszene.crc2.moveTo(_x - 840, _y + 545);
-            L09_2_Strandszene.crc2.lineTo(_x - 900, _y + 500);
-            L09_2_Strandszene.crc2.lineTo(_x - 840, _y + 570);
+            L09_2_Strandszene.crc2.moveTo(_x + 7, _y - 165);
+            L09_2_Strandszene.crc2.lineTo(_x - 80, _y - 152);
+            L09_2_Strandszene.crc2.lineTo(_x + 7, _y - 145);
             L09_2_Strandszene.crc2.closePath();
             L09_2_Strandszene.crc2.stroke();
             L09_2_Strandszene.crc2.fillStyle = "green";
             L09_2_Strandszene.crc2.fill();
-            //Blatt rechts oben
+            //Blatt rechts unten
             L09_2_Strandszene.crc2.beginPath();
-            L09_2_Strandszene.crc2.moveTo(_x - 840, _y + 545);
-            L09_2_Strandszene.crc2.lineTo(_x - 770, _y + 500);
-            L09_2_Strandszene.crc2.lineTo(_x - 840, _y + 570);
+            L09_2_Strandszene.crc2.moveTo(_x + 7, _y - 150);
+            L09_2_Strandszene.crc2.lineTo(_x + 80, _y - 130);
+            L09_2_Strandszene.crc2.lineTo(_x + 7, _y - 130);
+            L09_2_Strandszene.crc2.closePath();
+            L09_2_Strandszene.crc2.stroke();
+            L09_2_Strandszene.crc2.fillStyle = "green";
+            L09_2_Strandszene.crc2.fill();
+            //Blatt rechts mitte
+            L09_2_Strandszene.crc2.beginPath();
+            L09_2_Strandszene.crc2.moveTo(_x + 7, _y - 145);
+            L09_2_Strandszene.crc2.lineTo(_x + 80, _y - 110);
+            L09_2_Strandszene.crc2.lineTo(_x + 7, _y - 125);
+            L09_2_Strandszene.crc2.closePath();
+            L09_2_Strandszene.crc2.stroke();
+            L09_2_Strandszene.crc2.fillStyle = "green";
+            L09_2_Strandszene.crc2.fill();
+            //Blatt rechts oben 
+            L09_2_Strandszene.crc2.beginPath();
+            L09_2_Strandszene.crc2.moveTo(_x + 7, _y - 165);
+            L09_2_Strandszene.crc2.lineTo(_x + 80, _y - 152);
+            L09_2_Strandszene.crc2.lineTo(_x + 7, _y - 145);
             L09_2_Strandszene.crc2.closePath();
             L09_2_Strandszene.crc2.stroke();
             L09_2_Strandszene.crc2.fillStyle = "green";

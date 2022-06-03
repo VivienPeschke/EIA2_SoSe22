@@ -10,7 +10,7 @@ namespace L09_2_Strandszene {
             this.drawUrlauberi(300, 475); //linker Urlauberi
             this.drawUrlauberi(500, 500); //rechter Urlauberi
 
-            this.drawSurfboard(350, 400);
+            this.drawSurfboard(); //braucht keine Übergabeparameter; wird an der entsprechenden Stelle gezeichnet
             this.drawSurfer(400, 350); //Stehendes Männchen im Wasser
 
             this.drawSwimmer(230, 350); //Linker Swimmer
@@ -124,10 +124,10 @@ namespace L09_2_Strandszene {
 
         }
 
-        drawSurfboard(_x: number, _y: number): void {
+        drawSurfboard(): void {
 
             crc2.beginPath();
-            crc2.ellipse(-20, 180, 20, 50, 20, 0, 2 * Math.PI);
+            crc2.ellipse(400, 350, 20, 50, 20, 0, 2 * Math.PI);
             crc2.stroke();
             crc2.fillStyle = "orange";
             crc2.fill();
@@ -225,34 +225,14 @@ namespace L09_2_Strandszene {
 
             //Stamm (Baumstamm-mäßig?!)
             crc2.fillStyle = ("HSL(33, 46%, 23%");
-            crc2.fillRect(_x - 850, _y + 550, 15, 250);
+            crc2.fillRect(_x + 0, _y - 150, 15, 150);
 
             //Blätter (Sind das Blätter?!)
             //Blatt links unten
             crc2.beginPath();
-            crc2.moveTo(_x - 840, _y + 545);
-            crc2.lineTo(_x - 930, _y + 600);
-            crc2.lineTo(_x - 840, _y + 570);
-            crc2.closePath();
-            crc2.stroke();
-            crc2.fillStyle = "green";
-            crc2.fill();
-
-            //Blatt rechts unten
-            crc2.beginPath();
-            crc2.moveTo(_x - 840, _y + 545);
-            crc2.lineTo(_x - 750, _y + 600);
-            crc2.lineTo(_x - 840, _y + 570);
-            crc2.closePath();
-            crc2.stroke();
-            crc2.fillStyle = "green";
-            crc2.fill();
-
-            //Blatt rechts mitte
-            crc2.beginPath();
-            crc2.moveTo(_x - 840, _y + 545);
-            crc2.lineTo(_x - 750, _y + 550);
-            crc2.lineTo(_x - 840, _y + 570);
+            crc2.moveTo(_x + 7, _y - 150);
+            crc2.lineTo(_x - 80, _y - 130);
+            crc2.lineTo(_x + 7, _y - 130);
             crc2.closePath();
             crc2.stroke();
             crc2.fillStyle = "green";
@@ -260,29 +240,49 @@ namespace L09_2_Strandszene {
 
             //Blatt links mitte
             crc2.beginPath();
-            crc2.moveTo(_x - 840, _y + 545);
-            crc2.lineTo(_x - 930, _y + 550);
-            crc2.lineTo(_x - 840, _y + 570);
+            crc2.moveTo(_x + 7, _y - 145);
+            crc2.lineTo(_x - 80, _y - 110);
+            crc2.lineTo(_x + 7, _y - 125);
             crc2.closePath();
             crc2.stroke();
             crc2.fillStyle = "green";
             crc2.fill();
 
-            //Blatt links oben
+            //Blatt links oben 
             crc2.beginPath();
-            crc2.moveTo(_x - 840, _y + 545);
-            crc2.lineTo(_x - 900, _y + 500);
-            crc2.lineTo(_x - 840, _y + 570);
+            crc2.moveTo(_x + 7, _y - 165);
+            crc2.lineTo(_x - 80, _y - 152);
+            crc2.lineTo(_x + 7, _y - 145);
             crc2.closePath();
             crc2.stroke();
             crc2.fillStyle = "green";
             crc2.fill();
 
-            //Blatt rechts oben
+            //Blatt rechts unten
             crc2.beginPath();
-            crc2.moveTo(_x - 840, _y + 545);
-            crc2.lineTo(_x - 770, _y + 500);
-            crc2.lineTo(_x - 840, _y + 570);
+            crc2.moveTo(_x + 7, _y - 150);
+            crc2.lineTo(_x + 80, _y - 130);
+            crc2.lineTo(_x + 7, _y - 130);
+            crc2.closePath();
+            crc2.stroke();
+            crc2.fillStyle = "green";
+            crc2.fill();
+
+            //Blatt rechts mitte
+            crc2.beginPath();
+            crc2.moveTo(_x + 7, _y - 145);
+            crc2.lineTo(_x + 80, _y - 110);
+            crc2.lineTo(_x + 7, _y - 125);
+            crc2.closePath();
+            crc2.stroke();
+            crc2.fillStyle = "green";
+            crc2.fill();
+
+            //Blatt rechts oben 
+            crc2.beginPath();
+            crc2.moveTo(_x + 7, _y - 165);
+            crc2.lineTo(_x + 80, _y - 152);
+            crc2.lineTo(_x + 7, _y - 145);
             crc2.closePath();
             crc2.stroke();
             crc2.fillStyle = "green";

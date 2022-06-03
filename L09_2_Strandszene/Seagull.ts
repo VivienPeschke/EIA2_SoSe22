@@ -9,24 +9,24 @@ namespace L09_2_Strandszene {
             this.x = 0;
             this.y = 0;
 
-            this.drawSeagull(0, 0);
-            this.drawSeagull(- 100, -50);
+            this.drawSeagull();
+            this.drawSeagull();
             this.moveForward();
 
         }
 
-        drawSeagull(_x: number, _y: number): void {
+        drawSeagull(): void {
 
             crc2.beginPath();
-            crc2.arc(_x + 0, _y + 0, 8, 3, 0);
-            crc2.arc(_x + 16, _y + 0, 8, 3, 0);
+            crc2.arc(this.x + 0, this.y + 0, 8, 3, 0);
+            crc2.arc(this.x + 16, this.y + 0, 8, 3, 0);
             crc2.stroke();
 
         }
 
         update(): void {
-            this.drawSeagull(0, 0);
-            this.drawSeagull(- 100, -50);
+            this.drawSeagull();
+            this.drawSeagull();
             this.moveForward();
         }
 
