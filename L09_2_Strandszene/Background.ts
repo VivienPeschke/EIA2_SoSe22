@@ -16,16 +16,16 @@ namespace L09_2_Strandszene {
             this.drawSwimmer(230, 350); //Linker Swimmer
             this.drawSwimmer(500, 370); // Rechter Swimmer
 
-            this.drawPalmtrees(130, 470);
-            this.drawPalmtrees(650, 450);
+            this.drawPalmtrees(130, 470); //Linke Palme
+            this.drawPalmtrees(650, 450); //Rechte Palme
 
-            this.drawVegetation(635, 450); //Rechte Vegetation; Linker Büschel
-            this.drawVegetation(650, 450); //Rechte Vegetation; Mittlerer Büschel
-            this.drawVegetation(665, 450); //Rechte Vegetation; Rechter Büschel
+            this.drawVegetation(635, 450); //Rechte Palme; Linker Büschel
+            this.drawVegetation(650, 450); //Rechte Palme; Mittlerer Büschel
+            this.drawVegetation(665, 450); //Rechte Palme; Rechter Büschel
 
-            this.drawVegetation(120, 475); //Linke Vegetation; Linker Büschel
-            this.drawVegetation(130, 475); //Linke Vegetation; Mittlerer Büschel
-            this.drawVegetation(140, 475); //Linke Vegetation; Rechter Büschel
+            this.drawVegetation(120, 475); //Linke Palme; Linker Büschel
+            this.drawVegetation(130, 475); //Linke Palme; Mittlerer Büschel
+            this.drawVegetation(140, 475); //Linke Palme; Rechter Büschel
 
             this.drawVegetation(200, 500); //Freie Vegetation; Links
             this.drawVegetation(350, 480); //Freie Vegetation; Mitte
@@ -37,7 +37,7 @@ namespace L09_2_Strandszene {
 
             //Meer
             crc2.fillStyle = ("HSL(235, 100%, 51%");
-            crc2.fillRect(0, 0, 800, 400);
+            crc2.fillRect(0, 250, 800, 400);
 
             //Himmel
             crc2.fillStyle = ("HSL(194, 100%, 51%");
