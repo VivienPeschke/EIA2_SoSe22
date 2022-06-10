@@ -37,7 +37,7 @@ namespace L09_2_Strandszene {
 
             //Meer
             crc2.fillStyle = ("HSL(235, 100%, 51%");
-            crc2.fillRect(0, 250, 800, 400);
+            crc2.fillRect(0, 250, 800, 200);
 
             //Himmel
             crc2.fillStyle = ("HSL(194, 100%, 51%");

@@ -27,7 +27,7 @@ var L09_2_Strandszene;
             console.log("Background");
             //Meer
             L09_2_Strandszene.crc2.fillStyle = ("HSL(235, 100%, 51%");
-            L09_2_Strandszene.crc2.fillRect(0, 250, 800, 400);
+            L09_2_Strandszene.crc2.fillRect(0, 250, 800, 200);
             //Himmel
             L09_2_Strandszene.crc2.fillStyle = ("HSL(194, 100%, 51%");
             L09_2_Strandszene.crc2.fillRect(0, 0, 800, 250);
