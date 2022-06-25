@@ -1,16 +1,12 @@
 namespace L10_2_PolymorphieAnimation {
 
-    export interface Vector {
-        x: number;
-        y: number;
-    }
-    
-    window.addEventListener("load", handleLoad);
     export let crc2: CanvasRenderingContext2D;
     let canvas: HTMLCanvasElement;
     let imgData: ImageData;
 
     let moveableObjects: Moveable[] = [];
+
+    window.addEventListener("load", handleLoad);
 
     // Start
     function handleLoad(_event: Event): void {
@@ -19,7 +15,6 @@ namespace L10_2_PolymorphieAnimation {
 
         //Hintergund mittels einer Klasse erstellen
         let back: Background = new Background();
-        console.log(back);
 
         //Speichern des Canvas als Bild (natürlich nachdem das Hintergrundbild gemalt wurde)
         imgData = crc2.getImageData(0, 0, canvas.width, canvas.height);
@@ -29,11 +24,12 @@ namespace L10_2_PolymorphieAnimation {
 
         //Erscheinen der Vögel
         for (let i: number = 0; i < 3; i++) {
-            let newBird: Seagull = new Seagull();
-            newBird.position.x = Math.random() * crc2.canvas.width;
-            newBird.position.y = Math.random() * 50;
-            newBird.speed = (Math.random() < 0.5 ? -1 : 1) * 2;
-            moveableObjects[i] = newBird;
+            let newSeagull: Seagull = new Seagull();
+            newSeagull.position.x = Math.random() * crc2.canvas.width;
+            newSeagull.position.y = Math.random() * 50;
+            newSeagull.speed = (Math.random() < 0.5 ? -1 : 1) * 2;
+            moveableObjects[i] = newSeagull;
+            moveableObjects.push(newSeagull);
         }
         //Wolken platzieren
         for (let i: number = 0; i < 10; i++) {
@@ -45,6 +41,9 @@ namespace L10_2_PolymorphieAnimation {
         }
 
         window.setTimeout(animate, 10);
+
+        console.log(moveableObjects);
+
     } // close load-function
 
     //Funktion Boot
@@ -57,32 +56,7 @@ namespace L10_2_PolymorphieAnimation {
             moveableObjects.push(ship1);
         }
     }
-    
-    //Animationen für Seagull, Clouds & Ship
-    function animate(): void {
-        crc2.putImageData(imgData, 0, 0);
-
-        for (let i: number = 0; i < moveableObjects.length; i++) {
-            moveableObjects[i].moveForward();
-        }
-
-        drawClouds(); //animierte Clouds
-
-        for (let i: number = 0; i < moveableObjects.length; i++) {
-            let seagull: Seagull = moveableObjects[i];
-            seagull.update(); //animierte Seagulls
-            
-        }
-        
-
-        for (let i: number = 0; i < moveableObjects.length; i++) {
-            let SHIP: Ship = moveableObjects[i];
-            SHIP.draw(); //animiertes Ship
-        }
-
-        window.setTimeout(animate, 10);
-    }
-
+/*
     function update(): void {
         crc2.fillRect(0, 0, crc2.canvas.width, crc2.canvas.height);
         crc2.putImageData(imgData, 0, 0);
@@ -91,10 +65,23 @@ namespace L10_2_PolymorphieAnimation {
             moveable.moveForward();
             moveable.draw();
         }
+    } */
+
+    //Animationen für Seagull, Clouds & Ship
+    function animate(): void {
+        crc2.putImageData(imgData, 0, 0);
+
+        for (let i: number = 0; i < moveableObjects.length; i++) {
+            moveableObjects[i].moveForward();
+        }
+
+        animateClouds(); //animierte Clouds
+
+
+        window.setTimeout(animate, 10);
     }
 
-    function drawClouds(): void {
-        for (let i: number = 0; i < moveableObjects.length; i++)
-        moveableObjects[i].draw();
+    function animateClouds(): void {
+        for (let i: number = 0; i < moveableObjects.length; i++);
     }
 }

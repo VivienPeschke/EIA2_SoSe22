@@ -1,6 +1,6 @@
 namespace L10_2_PolymorphieAnimation {
 
-    export abstract class Moveable {
+    export class Moveable {
         position: Vector;
         velocity: Vector;
         speed: number;
@@ -10,7 +10,6 @@ namespace L10_2_PolymorphieAnimation {
                 this.position = _position;
             else
                 this.position = new Vector(0, 0);
-
             this.velocity = new Vector(0, 0);
 
         }
