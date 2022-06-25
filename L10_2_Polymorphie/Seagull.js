@@ -17,7 +17,7 @@ var L10_2_PolymorphieAnimation;
 (function (L10_2_PolymorphieAnimation) {
     var Seagull = /** @class */ (function (_super) {
         __extends(Seagull, _super);
-        function Seagull() {
+        function Seagull(_position) {
             var _this = _super.call(this, _position) || this;
             _this.position.x = 0;
             _this.position.y = 0;

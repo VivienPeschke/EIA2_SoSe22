@@ -1,9 +1,18 @@
 namespace L10_2_PolymorphieAnimation {
 
-    export class Ship {
+    export class Ship extends Moveable {
         position: Vector;
         velocity: Vector;
         speed: number;
+
+        constructor(_position?: Vector) {
+            super(_position);
+            this.position.x = 0;
+            this.position.y = 0;
+
+            this.draw();
+
+        }
 
         draw(): void {
 

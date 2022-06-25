@@ -5,7 +5,7 @@ namespace L10_2_PolymorphieAnimation {
         velocity: Vector;
         speed: number;
 
-        constructor() {
+        constructor(_position?: Vector) {
             super(_position);
             this.position.x = 0;
             this.position.y = 0;
