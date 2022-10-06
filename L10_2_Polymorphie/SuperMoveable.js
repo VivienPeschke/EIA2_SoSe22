@@ -2,11 +2,13 @@ var L10_2_PolymorphieAnimation;
 (function (L10_2_PolymorphieAnimation) {
     var Moveable = /** @class */ (function () {
         function Moveable(_position) {
-            if (_position)
+            if (_position) {
                 this.position = _position;
-            else
+            }
+            else {
                 this.position = new L10_2_PolymorphieAnimation.Vector(0, 0);
-            this.velocity = new L10_2_PolymorphieAnimation.Vector(0, 0);
+                this.velocity = new L10_2_PolymorphieAnimation.Vector(0, 0);
+            }
         }
         Moveable.prototype.moveForward = function () {
             this.position.x += this.position.y * +0.5;

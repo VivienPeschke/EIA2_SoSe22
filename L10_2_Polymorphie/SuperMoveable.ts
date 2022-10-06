@@ -5,13 +5,14 @@ namespace L10_2_PolymorphieAnimation {
         velocity: Vector;
         speed: number;
 
-        constructor(_position: Vector) {
-            if (_position)
+        constructor(_position?: Vector) {
+            if (_position) {
                 this.position = _position;
-            else
+            }
+            else {
                 this.position = new Vector(0, 0);
-            this.velocity = new Vector(0, 0);
-
+                this.velocity = new Vector(0, 0);
+            }
         }
 
         moveForward(): void {
@@ -25,6 +26,6 @@ namespace L10_2_PolymorphieAnimation {
         }
 
         // tslint:disable-next-line: no-empty
-        draw(): void {}
+        draw(): void { }
     }
 }

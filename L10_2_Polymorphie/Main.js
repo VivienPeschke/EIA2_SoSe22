@@ -60,12 +60,7 @@ var L10_2_PolymorphieAnimation;
         for (var i = 0; i < moveableObjects.length; i++) {
             moveableObjects[i].moveForward();
         }
-        animateClouds(); //animierte Clouds
         window.setTimeout(animate, 10);
-    }
-    function animateClouds() {
-        for (var i = 0; i < moveableObjects.length; i++)
-            ;
     }
 })(L10_2_PolymorphieAnimation || (L10_2_PolymorphieAnimation = {}));
 //# sourceMappingURL=Main.js.map

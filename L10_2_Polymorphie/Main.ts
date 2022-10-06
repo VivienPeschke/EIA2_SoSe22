@@ -24,7 +24,7 @@ namespace L10_2_PolymorphieAnimation {
 
         //Erscheinen der Vögel
         for (let i: number = 0; i < 3; i++) {
-            let newSeagull: Seagull = new Seagull();
+            let newSeagull: Moveable = new Seagull();
             newSeagull.position.x = Math.random() * crc2.canvas.width;
             newSeagull.position.y = Math.random() * 50;
             newSeagull.speed = (Math.random() < 0.5 ? -1 : 1) * 2;
@@ -33,7 +33,7 @@ namespace L10_2_PolymorphieAnimation {
         }
         //Wolken platzieren
         for (let i: number = 0; i < 10; i++) {
-            let newCloud: Cloud = new Cloud();
+            let newCloud: Moveable = new Cloud();
             newCloud.position.x = Math.random() * crc2.canvas.width;
             newCloud.position.y = Math.random() * 175;
             newCloud.speed = (Math.random() + 1) * 0.5;
@@ -49,7 +49,7 @@ namespace L10_2_PolymorphieAnimation {
     //Funktion Boot
     function createShip(n: number): void {
         for (let index: number = 0; index < n; index++) {
-            let ship1: Ship = new Ship();
+            let ship1: Moveable = new Ship();
             ship1.position.x = 100;
             ship1.position.y = 270;
             ship1.speed = (Math.random() + 1) * 0.5;
@@ -75,13 +75,6 @@ namespace L10_2_PolymorphieAnimation {
             moveableObjects[i].moveForward();
         }
 
-        animateClouds(); //animierte Clouds
-
-
         window.setTimeout(animate, 10);
-    }
-
-    function animateClouds(): void {
-        for (let i: number = 0; i < moveableObjects.length; i++);
     }
 }
