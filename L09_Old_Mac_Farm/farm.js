@@ -1,11 +1,12 @@
+"use strict";
 var L09_Old_Mac_Farm;
 (function (L09_Old_Mac_Farm) {
     window.addEventListener("load", hndLoad);
-    var cow;
-    var horse;
-    var chicken;
-    var sheep;
-    var dog;
+    let cow;
+    let horse;
+    let chicken;
+    let sheep;
+    let dog;
     function hndLoad(_event) {
         cow = new L09_Old_Mac_Farm.Animal("Berta", "Grass", "moo", 50);
         horse = new L09_Old_Mac_Farm.Animal("Jochen", "Apples", "weeha", 50);

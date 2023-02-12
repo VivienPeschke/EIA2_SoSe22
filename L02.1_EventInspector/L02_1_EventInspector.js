@@ -1,3 +1,4 @@
+"use strict";
 var L02_1_EventInspector;
 (function (L02_1_EventInspector) {
     window.addEventListener("load", handleLoad);
@@ -9,18 +10,18 @@ var L02_1_EventInspector;
         document.body.addEventListener("click", logInfo);
         document.body.addEventListener("keyup", logInfo);
         //auf die DIV's in der HTML zugreifen
-        var divs = document.querySelectorAll("div");
+        let divs = document.querySelectorAll("div");
         console.log(divs);
         //For-Schleife um 
-        for (var i = 0; i < divs.length; i++) {
+        for (let i = 0; i < divs.length; i++) {
             divs[i].addEventListener("click", logInfo);
             divs[i].addEventListener("keyup", logInfo);
         }
     }
     function setInfoBox(_event) {
-        var x = _event.clientX;
-        var y = _event.clientY;
-        var spanfix = document.querySelector("span");
+        let x = _event.clientX;
+        let y = _event.clientY;
+        let spanfix = document.querySelector("span");
         spanfix.style.top = (y + 15) + "px";
         spanfix.style.left = (x + 15) + "px";
         spanfix.textContent = " x = " + x + "; y = " + y + "; " + _event.target;

@@ -1,9 +1,10 @@
+"use strict";
 var Strand;
 (function (Strand) {
     window.addEventListener("load", handleLoad);
-    var crc2;
+    let crc2;
     function handleLoad(_event) {
-        var canvas = document.querySelector("canvas");
+        let canvas = document.querySelector("canvas");
         if (!canvas)
             return;
         crc2 = canvas.getContext("2d");
@@ -44,9 +45,9 @@ var Strand;
     }
     function drawSun(_position) {
         console.log("Sun", _position);
-        var r1 = 30;
-        var r2 = 150;
-        var gradient = crc2.createRadialGradient(0, 0, r1, 0, 0, r2);
+        let r1 = 30;
+        let r2 = 150;
+        let gradient = crc2.createRadialGradient(0, 0, r1, 0, 0, r2);
         gradient.addColorStop(0, "HSLA(60, 100%, 90%, 1)");
         gradient.addColorStop(1, "HSLA(60, 100%, 50%, 0)");
         crc2.save();
@@ -58,20 +59,20 @@ var Strand;
     }
     function drawCloud(_position, _size) {
         console.log("Cloud", _position, _size);
-        var nParticles = 30;
-        var radiusParticle = 50;
-        var particle = new Path2D();
-        var gradient = crc2.createRadialGradient(0, 0, 0, 0, 0, radiusParticle);
+        let nParticles = 30;
+        let radiusParticle = 50;
+        let particle = new Path2D();
+        let gradient = crc2.createRadialGradient(0, 0, 0, 0, 0, radiusParticle);
         particle.arc(0, 0, radiusParticle, 0, 2 * Math.PI);
         gradient.addColorStop(0, "HSLA(0, 100%, 100%, 0.5)");
         gradient.addColorStop(1, "HSLA(0, 100%, 100%, 0)");
         crc2.save();
         crc2.translate(_position.x, _position.y);
         crc2.fillStyle = gradient;
-        for (var draw = 0; draw < nParticles; draw++) {
+        for (let draw = 0; draw < nParticles; draw++) {
             crc2.save();
-            var x = (Math.random() - 0.5) * _size.x;
-            var y = (Math.random() * _size.y);
+            let x = (Math.random() - 0.5) * _size.x;
+            let y = (Math.random() * _size.y);
             crc2.translate(x, y);
             crc2.fill(particle);
             crc2.restore();

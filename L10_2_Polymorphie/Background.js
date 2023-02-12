@@ -1,7 +1,8 @@
+"use strict";
 var L10_2_PolymorphieAnimation;
 (function (L10_2_PolymorphieAnimation) {
-    var Background = /** @class */ (function () {
-        function Background() {
+    class Background {
+        constructor() {
             this.drawBackground();
             this.drawSun(100, 75);
             this.drawBeach(0, 250);
@@ -23,7 +24,7 @@ var L10_2_PolymorphieAnimation;
             this.drawVegetation(350, 480); //Freie Vegetation; Mitte
             this.drawVegetation(575, 500); //Freie Vegetation; Rechts
         }
-        Background.prototype.drawBackground = function () {
+        drawBackground() {
             console.log("Background");
             //Meer
             L10_2_PolymorphieAnimation.crc2.fillStyle = ("HSL(235, 100%, 51%");
@@ -31,11 +32,11 @@ var L10_2_PolymorphieAnimation;
             //Himmel
             L10_2_PolymorphieAnimation.crc2.fillStyle = ("HSL(194, 100%, 51%");
             L10_2_PolymorphieAnimation.crc2.fillRect(0, 0, 800, 250);
-        };
-        Background.prototype.drawSun = function (_x, _y) {
-            var r1 = 30;
-            var r2 = 150;
-            var gradient = L10_2_PolymorphieAnimation.crc2.createRadialGradient(0, 0, r1, 0, 0, r2);
+        }
+        drawSun(_x, _y) {
+            let r1 = 30;
+            let r2 = 150;
+            let gradient = L10_2_PolymorphieAnimation.crc2.createRadialGradient(0, 0, r1, 0, 0, r2);
             gradient.addColorStop(0, "HSLA(60, 100%, 90%, 1)");
             gradient.addColorStop(1, "HSLA(60, 100%, 50%, 0)");
             L10_2_PolymorphieAnimation.crc2.save();
@@ -44,8 +45,8 @@ var L10_2_PolymorphieAnimation;
             L10_2_PolymorphieAnimation.crc2.arc(0, 0, r2, 0, 2 * Math.PI);
             L10_2_PolymorphieAnimation.crc2.fill();
             L10_2_PolymorphieAnimation.crc2.restore();
-        };
-        Background.prototype.drawBeach = function (_x, _y) {
+        }
+        drawBeach(_x, _y) {
             L10_2_PolymorphieAnimation.crc2.beginPath();
             L10_2_PolymorphieAnimation.crc2.moveTo(_x, _y);
             L10_2_PolymorphieAnimation.crc2.bezierCurveTo(_x + 0, _y + 200, _x + 790, _y + 150, _x + 800, _y + 40);
@@ -57,8 +58,8 @@ var L10_2_PolymorphieAnimation;
             L10_2_PolymorphieAnimation.crc2.save();
             L10_2_PolymorphieAnimation.crc2.translate(_x, _y);
             L10_2_PolymorphieAnimation.crc2.restore();
-        };
-        Background.prototype.drawUrlauberi = function (_x, _y) {
+        }
+        drawUrlauberi(_x, _y) {
             L10_2_PolymorphieAnimation.crc2.beginPath();
             //Kopf
             L10_2_PolymorphieAnimation.crc2.arc(_x + 5, _y - 60, 11, 0, 2 * Math.PI);
@@ -89,8 +90,8 @@ var L10_2_PolymorphieAnimation;
             L10_2_PolymorphieAnimation.crc2.save();
             L10_2_PolymorphieAnimation.crc2.translate(_x, _y);
             L10_2_PolymorphieAnimation.crc2.restore();
-        };
-        Background.prototype.drawSurfboard = function () {
+        }
+        drawSurfboard() {
             L10_2_PolymorphieAnimation.crc2.beginPath();
             L10_2_PolymorphieAnimation.crc2.ellipse(400, 350, 20, 50, 20, 0, 2 * Math.PI);
             L10_2_PolymorphieAnimation.crc2.stroke();
@@ -98,8 +99,8 @@ var L10_2_PolymorphieAnimation;
             L10_2_PolymorphieAnimation.crc2.fill();
             L10_2_PolymorphieAnimation.crc2.save();
             L10_2_PolymorphieAnimation.crc2.restore();
-        };
-        Background.prototype.drawSurfer = function (_x, _y) {
+        }
+        drawSurfer(_x, _y) {
             L10_2_PolymorphieAnimation.crc2.beginPath();
             //Kopf
             L10_2_PolymorphieAnimation.crc2.arc(_x + 5, _y - 60, 11, 0, 2 * Math.PI);
@@ -130,8 +131,8 @@ var L10_2_PolymorphieAnimation;
             L10_2_PolymorphieAnimation.crc2.save();
             L10_2_PolymorphieAnimation.crc2.translate(_x, _y);
             L10_2_PolymorphieAnimation.crc2.restore();
-        };
-        Background.prototype.drawSwimmer = function (_x, _y) {
+        }
+        drawSwimmer(_x, _y) {
             L10_2_PolymorphieAnimation.crc2.beginPath();
             //Kopf
             L10_2_PolymorphieAnimation.crc2.arc(_x + 5, _y - 60, 11, 0, 2 * Math.PI);
@@ -158,8 +159,8 @@ var L10_2_PolymorphieAnimation;
             L10_2_PolymorphieAnimation.crc2.save();
             L10_2_PolymorphieAnimation.crc2.translate(_x, _y);
             L10_2_PolymorphieAnimation.crc2.restore();
-        };
-        Background.prototype.drawPalmtrees = function (_x, _y) {
+        }
+        drawPalmtrees(_x, _y) {
             //Stamm (Baumstamm-mäßig?!)
             L10_2_PolymorphieAnimation.crc2.fillStyle = ("HSL(33, 46%, 23%");
             L10_2_PolymorphieAnimation.crc2.fillRect(_x + 0, _y - 150, 15, 150);
@@ -218,8 +219,8 @@ var L10_2_PolymorphieAnimation;
             L10_2_PolymorphieAnimation.crc2.stroke();
             L10_2_PolymorphieAnimation.crc2.fillStyle = "green";
             L10_2_PolymorphieAnimation.crc2.fill();
-        };
-        Background.prototype.drawVegetation = function (_x, _y) {
+        }
+        drawVegetation(_x, _y) {
             L10_2_PolymorphieAnimation.crc2.beginPath();
             L10_2_PolymorphieAnimation.crc2.moveTo(_x + 0, _y + 0);
             L10_2_PolymorphieAnimation.crc2.lineTo(_x - 3, _y - 7);
@@ -232,9 +233,8 @@ var L10_2_PolymorphieAnimation;
             L10_2_PolymorphieAnimation.crc2.stroke();
             L10_2_PolymorphieAnimation.crc2.fillStyle = "green";
             L10_2_PolymorphieAnimation.crc2.fill();
-        };
-        return Background;
-    }());
+        }
+    }
     L10_2_PolymorphieAnimation.Background = Background;
 })(L10_2_PolymorphieAnimation || (L10_2_PolymorphieAnimation = {}));
 //# sourceMappingURL=Background.js.map

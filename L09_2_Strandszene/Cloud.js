@@ -1,9 +1,11 @@
+"use strict";
 var L09_2_Strandszene;
 (function (L09_2_Strandszene) {
-    var Cloud = /** @class */ (function () {
-        function Cloud() {
-        }
-        Cloud.prototype.drawCloud = function () {
+    class Cloud {
+        x;
+        y;
+        speed;
+        drawCloud() {
             L09_2_Strandszene.crc2.beginPath();
             L09_2_Strandszene.crc2.arc(this.x, this.y, 25, 0, 2 * Math.PI); // dritte Zahl = Durchmesser
             L09_2_Strandszene.crc2.arc(this.x + 45, this.y, 12, 0, 2 * Math.PI); // ganz rechter Kreis
@@ -13,8 +15,8 @@ var L09_2_Strandszene;
             L09_2_Strandszene.crc2.closePath();
             L09_2_Strandszene.crc2.fillStyle = "#FFFFFF";
             L09_2_Strandszene.crc2.fill();
-        };
-        Cloud.prototype.moveForward = function () {
+        }
+        moveForward() {
             this.x += this.speed * +0.5; // - nach links und + nach rechts
             if (this.x < 0) {
                 this.x = this.x + L09_2_Strandszene.crc2.canvas.width;
@@ -22,9 +24,8 @@ var L09_2_Strandszene;
             if (this.x > L09_2_Strandszene.crc2.canvas.width) {
                 this.x = this.x - L09_2_Strandszene.crc2.canvas.width;
             }
-        };
-        return Cloud;
-    }());
+        }
+    }
     L09_2_Strandszene.Cloud = Cloud;
 })(L09_2_Strandszene || (L09_2_Strandszene = {}));
 //# sourceMappingURL=Cloud.js.map

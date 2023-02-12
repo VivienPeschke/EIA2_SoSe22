@@ -1,22 +1,23 @@
+"use strict";
 //Code-Kopie von Evelin Sinner
 var L08_1_GenerativeKunst;
 (function (L08_1_GenerativeKunst) {
-    var crc2;
-    var color;
-    var saturation;
-    var lightness;
+    let crc2;
+    let color;
+    let saturation;
+    let lightness;
     window.addEventListener("load", hndLoad);
     function hndLoad(_event) {
-        var canvas = document.querySelector("canvas");
+        let canvas = document.querySelector("canvas");
         crc2 = canvas.getContext("2d");
-        var gradient = crc2.createLinearGradient(50, 100, 150, 400);
+        let gradient = crc2.createLinearGradient(50, 100, 150, 400);
         color = Math.round(Math.random() * 400);
         gradient.addColorStop(0, "hsl(" + color + "," + "80%, " + "90%" + ")");
         crc2.fillStyle = gradient;
         crc2.fillRect(0, 0, 2000, 1000);
-        for (var index = 0; index < 20; index++) {
-            var randomnumber1 = Math.floor(Math.random() * 800);
-            var randomnumber2 = Math.floor(Math.random() * 600);
+        for (let index = 0; index < 20; index++) {
+            let randomnumber1 = Math.floor(Math.random() * 800);
+            let randomnumber2 = Math.floor(Math.random() * 600);
             drawingcircle(randomnumber1, randomnumber2);
             drawingline(randomnumber1, randomnumber2);
             drawingtriangle(randomnumber1, randomnumber2);
@@ -27,7 +28,7 @@ var L08_1_GenerativeKunst;
         color = Math.round(Math.random() * 50);
         saturation = Math.round(Math.random() * 80);
         lightness = Math.round(Math.random() * 100);
-        var radius = Math.round(Math.random() * 60);
+        let radius = Math.round(Math.random() * 60);
         _randomnumber1 = Math.random() * 800;
         _randomnumber1 = Math.random() * 600;
         crc2.beginPath();
@@ -64,7 +65,7 @@ var L08_1_GenerativeKunst;
         color = Math.round(Math.random() * 500);
         saturation = Math.round(Math.random() * 90);
         lightness = Math.round(Math.random() * 100);
-        var radius = Math.floor(Math.random() * 60);
+        let radius = Math.floor(Math.random() * 60);
         _randomnumber1 = Math.random() * 800;
         _randomnumber1 = Math.random() * 600;
         crc2.beginPath();
